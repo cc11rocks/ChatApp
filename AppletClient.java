@@ -3,7 +3,7 @@ Last Updated : 1/14/2012 (ChatApp v3 Alpha Release)
 Name/Version : ChatApp v3.0 Alpha
 
 This software is owned by cc11rocks.  For permission for use or modification, please contact cc11rocks@yahoo.com and I will be glad to assist you.  This has been coded from scratch.  There is 1 minor differences between this public release of source code and the one that is coded by me :
-The IP of the server has been hidden (replaced with asterics)
+The IP and port of the server has been hidden (replaced with asterics)
 
 This is not a major thing, but I would like to keep it private for a few reasons.  It you contact me at cc11rocks@yahoo.com, I may release the removed information to you.
 
