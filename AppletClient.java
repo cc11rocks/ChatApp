@@ -1,3 +1,21 @@
+/*
+Last Updated : 1/14/2012 (ChatApp v3 Alpha Release)
+Name/Version : ChatApp v3.0 Alpha
+
+This software is owned by cc11rocks.  For permission for use or modification, please contact cc11rocks@yahoo.com and I will be glad to assist you.  This has been coded from scratch.  There is 1 minor differences between this public release of source code and the one that is coded by me :
+The IP of the server has been hidden (replaced with asterics)
+
+This is not a major thing, but I would like to keep it private for a few reasons.  It you contact me at cc11rocks@yahoo.com, I may release the removed information to you.
+
+If you find a bug, can suggest something better, have questions, or can suggest a feature, please make sure to email me (cc11rocks@yahoo.com).  You don't have to send me code (although this would be far easier to me of course).  Thank you very much!
+
+This project is tested by Redcap (security and bug testing) and myself (coding, testing, and everything else).
+
+To see testing or moderateration opportunities, please email me (cc11rocks@yahoo.com).  Thank you for your time and supporting the open-source (client only) and free ChatApp!
+
+
+*/
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -66,7 +84,7 @@ private Point pnt;
 
 @SuppressWarnings("unchecked") 
 public static void main (String[] args) { //765
-System.getSecurityManager().checkPermission(new SocketPermission("70.176.204.242", "accept, connect, listen"));
+System.getSecurityManager().checkPermission(new SocketPermission("***.***.***.***", "accept, connect, listen"));
 System.getSecurityManager().checkPermission(new RuntimePermission("readerThread"));
 new AppletClient();
 }
@@ -499,7 +517,7 @@ onlineUsers.setPreferredSize(new Dimension(100, 480));
 pnt = scroll.getLocation();
 connectTo();
 //if (!conected) {
-//connectTo("70.162.180.109");
+//connectTo("***.***.***.***");
 //}
 Random rand = new Random();
 int name_Int_Rand = rand.nextInt();
@@ -530,17 +548,9 @@ public void connectTo() {
 try {
 
 SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-sock = (SSLSocket) sslsocketfactory.createSocket("24.251.49.54", 5001); //24.251.49.54
+sock = (SSLSocket) sslsocketfactory.createSocket("***.***.***.***", *****);
 final String[] enabledCipherSuites = { "SSL_DH_anon_WITH_RC4_128_MD5" };
 sock.setEnabledCipherSuites(enabledCipherSuites);
-
- //sock = new Socket("98.167.211.9", 5001); //192.168.1.2 Dad's house : 24.251.49.54
- //sock.setSoTimeout(1200000);
- //my IP: "24.251.49.54"
- //Redcap's IP: "60.226.13.114"
- //for network: "192.168.1.*" NOTE: * is for personal...
- //for computer: "localhost"
- //for Mr. Scott: "70.162.180.109"
 InputStreamReader streamReader = new InputStreamReader(sock.getInputStream());
 Thread readerThread = new Thread(new IncomingReader());
 readerThread.start();
