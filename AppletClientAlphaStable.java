@@ -2,18 +2,8 @@
 Last Updated : 1/14/2012 (ChatApp v3 Alpha Release)
 Name/Version : ChatApp v3.0 Alpha
 
-This software is owned by lptech1024.  For permission for use or modification, please contact cc11rocks@yahoo.com and I will be glad to assist you.  This has been coded from scratch.  There is 1 minor differences between this public release of source code and the one that is coded by me :
+This software is owned by lptech1024.
 The IP and port of the server has been hidden (replaced with asterics)
-
-This is not a major thing, but I would like to keep it private for a few reasons.  It you contact me at cc11rocks@yahoo.com, I may release the removed information to you.
-
-If you find a bug, can suggest something better, have questions, or can suggest a feature, please make sure to email me (cc11rocks@yahoo.com).  You don't have to send me code (although this would be far easier to me of course).  Thank you very much!
-
-This project is tested by Redcap (security and bug testing) and myself (coding, testing, and everything else).
-
-To see testing or moderateration opportunities, please email me (cc11rocks@yahoo.com).  Thank you for your time and supporting the open-source (client only) and free ChatApp!
-
-
 */
 
 import java.io.*;
