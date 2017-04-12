@@ -1,10 +1,4 @@
-/*
-ChatApp v3.0 Alpha
-
-This software is owned by lptech1024.
-
-The IP and port of the server was replaced with asterics. Ideally, this would be specified in a configuration file.
-*/
+// The IP and port of the server was replaced with asterics. Ideally, this would be specified in a configuration file.
 
 import java.io.*;
 import java.net.*;
