@@ -1,9 +1,9 @@
 /*
-Last Updated : 1/14/2012 (ChatApp v3 Alpha Release)
-Name/Version : ChatApp v3.0 Alpha
+ChatApp v3.0 Alpha
 
 This software is owned by lptech1024.
-The IP and port of the server has been hidden (replaced with asterics)
+
+The IP and port of the server was replaced with asterics. Ideally, this would be specified in a configuration file.
 */
 
 import java.io.*;
