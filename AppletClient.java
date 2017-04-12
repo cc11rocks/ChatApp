@@ -67,7 +67,7 @@ private Timer timer;
 private Point pnt;
 
 @SuppressWarnings("unchecked") 
-public static void main (String[] args) { //765
+public static void main (String[] args) {
 System.getSecurityManager().checkPermission(new SocketPermission("***.***.***.***", "accept, connect, listen"));
 System.getSecurityManager().checkPermission(new RuntimePermission("readerThread"));
 new AppletClient();
@@ -89,16 +89,14 @@ public void mouseReleased(MouseEvent last) {}
 public void mouseClicked(MouseEvent af) {
 JList theList = (JList) af.getSource();
 int index = theList.locationToIndex(af.getPoint());
-//****
 if (index >= 0) {
 	Object o = theList.getModel().getElementAt(index);
 	outgoing.setText(o.toString() + "@");
 	outgoing.requestFocus();
 }
-//****
 }
-}); //408
-JScrollPane onlineUserPane = new JScrollPane(onlineUsers); //225
+});
+JScrollPane onlineUserPane = new JScrollPane(onlineUsers);
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 no.setAutoscrolls(true);
 no.setEditable(false);
@@ -112,7 +110,7 @@ top.setBackground(new Color(200, 221, 242));
 JPanel scrollPanels = new JPanel();
 scrollPanels.setLayout(new BorderLayout());
 typingUsers.setBackground(new Color(200, 221, 242));
-scrollPanels.add("North", typingUsers); //This line screws it up somehow
+scrollPanels.add("North", typingUsers); // This line screws it up somehow
 //typingUsers.setMinimumSize(new Dimension(100, 40));
 scrollPanels.add("Center", scroll);
 top.add("Center", scrollPanels);
@@ -171,7 +169,7 @@ color.add(lightPink);
 color.add(darkPink);
 color.add(yellow);
 color.add(cyan);
-JPanel colorSlashSound = new JPanel(new GridLayout(0,1)); //Regular (FlowLayout) for squeeze
+JPanel colorSlashSound = new JPanel(new GridLayout(0,1)); // Regular (FlowLayout) for squeeze
 colorSlashSound.add(soundControls);
 colorSlashSound.add(color);
 mainPane.add("Sound & Color", colorSlashSound);
@@ -182,9 +180,9 @@ comingSoon_Login.setLayout(new GridLayout(0,2));
 JLabel logName = new JLabel("Username (4-11 Characters, Case Sensative) : ");
 JLabel logPass = new JLabel("Password (4-11 Characters, Case Sensative) : ");
 JLabel regName = new JLabel("Username (4-11 Characters, Case Sensative) : ");
-JLabel regPass = new JLabel("Password (4-11 Characters, Case Sensative) : "); //562
+JLabel regPass = new JLabel("Password (4-11 Characters, Case Sensative) : ");
 JLabel regMail = new JLabel("Email (10 -50 Characters): ");
-addHListener(rname); //Highlight on focus
+addHListener(rname); // Highlight on focus
 addHListener(rpass);
 addHListener(rmail);
 addHListener(lpass);
@@ -449,7 +447,7 @@ tryM(fqDOC, fqDOC.getLength(), "Test", fqPaneAttrs);
 fqPane.setEditable(false);
 fqPanel.add(fqScroll);
 mainPane.add("F&Q (Not Complete)", fqPanel);
-add("North", new JLabel("Comments, questions, or suggestions? Email me at \"cc11rocks@yahoo.com\". Awesome Redcap checks for bugs & security!"));
+add("North", new JLabel("Comments, questions, or suggestions? Email me at \"cc11rocks@yahoo.com\"."));
 add("Center", mainPane);
 name.addFocusListener(new FocusListener() {
 public void focusGained(FocusEvent e) {
@@ -524,7 +522,7 @@ catch (Exception eaff) {
 outgoing.setEditable(false);
 name.setEditable(false);
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.green);
-tryM(doc, doc.getLength(), "Connection unsuccessful :  The server may not be up.  Please click outside of this Applet and push F5 to try again.  The page should reload.", attributes);
+tryM(doc, doc.getLength(), "Connection unsuccessful : The server may not be up. Please click outside of this Applet and push F5 to try again. The page should reload.", attributes);
 goOffline();
 }
 }
@@ -577,7 +575,7 @@ list.addElement(st1.nextToken());
 }
 else if (message.equals("INNAPROPRIATEMESSAGERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), "Your message was rejected because you entered in an inappropriate word or phrase (cuss word/phrase or other).  Please resend your message with the word omitted or a more acceptable word in place.", attributes);
+tryM(doc, doc.getLength(), "Your message was rejected because you entered in an inappropriate word or phrase. Please resend a cleaner message.", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
@@ -590,28 +588,28 @@ ping();
 }
 else if (message.equals("INNAPROPRIATENAMEERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), "Your name was rejected because you entered in an inappropriate name (cuss word or other).  Please change your name.  Your name has been changed back to the original until you change it.", attributes);
+tryM(doc, doc.getLength(), "Your name was rejected because you entered in an inappropriate name. Please change your name. Your name has been changed back to the original.", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
 }
 else if (message.equals("HACKINGDETECTEDERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), "Please do not prepend your name with the following : \"Connected\", \"setName\", \"Null\", or \"Mod\".  Please change your name.  Your name has been changed back to the original until you change it.", attributes);
+tryM(doc, doc.getLength(), "Please do not prepend your name with the following : \"Connected\", \"setName\", \"Null\", or \"Mod\". Please change your name. Your name has been changed back to the original.", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
 }
 else if (message.equals("ILLEGALCHARACTERERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), "You have used an illegal character (&, @, (, ), {, or }).  Please do not use these characters in your name.  Please change your name.  Your name has been changed to the original until you change it. ", attributes);
+tryM(doc, doc.getLength(), "You have used an illegal character (&, @, (, ), {, or }). Please do not use these characters in your name. Please change your name. Your name has been changed to the original.", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
 }
 else if (message.equals("ALT255ERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), getTime() + " Redcap(Mod) says : No alt+255, n00b", attributes);
+tryM(doc, doc.getLength(), getTime() + " Mod says : No alt+255, n00b", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
@@ -631,7 +629,7 @@ ping();
 }
 else if (message.equals("NAMEINUSEERROR")) {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.red);
-tryM(doc, doc.getLength(), "Name is in use already (Online or Registered).  Please choose a different name.", attributes);
+tryM(doc, doc.getLength(), "Name is in use already (Online or Registered). Please choose a different name.", attributes);
 no.setCaretPosition(no.getDocument().getLength());
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.black);
 ping();
@@ -680,14 +678,14 @@ accountLog.append("\nThe account was not deleted. Please try again!");
 accountLog.setCaretPosition(accountLog.getDocument().getLength());
 }
 else if (message.equals("REGISTRATIONSUCCESSFUL")) {
-log.append("\nRegistration attempt was successful...Status : Pending. Please check back in 5 minutes to see if you were accepted.  Please allow up to 24 hours for acceptance.");
+log.append("\nRegistration attempt was successful...Status : Pending. Please check back in 5 minutes to see if you were accepted. Please allow up to 24 hours for acceptance.");
 rpass.setText("");
 rmail.setText("");
 rname.setText("");
 log.setCaretPosition(log.getDocument().getLength());
 }
 else if (message.equals("INNAPROPRIATENAMEFAIL")) {
-log.append("\nYour name was rejected because you entered in an inappropriate\nname (cuss word or other).");
+log.append("\nYour name was rejected because you entered in an inappropriate\nname.");
 rname.setText("");
 log.setCaretPosition(log.getDocument().getLength());
 }
@@ -703,7 +701,7 @@ log.setCaretPosition(log.getDocument().getLength());
 }
 else if (message.equals("ALT255FAIL")) {
 rname.setText("");
-log.append("\n" + getTime() + " Redcap(Mod) says : No alt+255, n00b");
+log.append("\n" + getTime() + " Mod says : No alt+255, n00b");
 log.setCaretPosition(log.getDocument().getLength());
 }
 else if (message.equals("NAMEINUSEFAIL")) {
@@ -784,7 +782,7 @@ sendAndReset(message);
 }
 //try {
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.green);
-tryM(doc, doc.getLength(), getTime() + "\nYou are not connected to the server.  Please refresh the page (click outside of Applet + push F5).", attributes);
+tryM(doc, doc.getLength(), getTime() + "\nYou are not connected to the server. Please refresh the page (click outside of Applet + push F5).", attributes);
 //}
 goOffline();
 //catch (Exception fff) {}
@@ -795,7 +793,7 @@ exaf.printStackTrace();
 
 //*****************8
 attributes.addAttribute(StyleConstants.CharacterConstants.Foreground, Color.green);
-tryM(doc, doc.getLength(), getTime() + " " + "\nYou are not connected to the server.  Please refresh the page (click outside of Applet + push F5).", attributes);
+tryM(doc, doc.getLength(), getTime() + " " + "\nYou are not connected to the server. Please refresh the page (click outside of Applet + push F5).", attributes);
 goOffline();
 //*8888************8
  
