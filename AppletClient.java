@@ -1,4 +1,4 @@
-// The IP and port of the server was replaced with asterics. Ideally, this would be specified in a configuration file.
+// The IP and port of the server were replaced with asterics. Ideally, this would be specified in a configuration file.
 
 import java.io.*;
 import java.net.*;
